@@ -4,3 +4,4 @@ This repository contains my timed coding quiz on JavaScript fundamentals that st
 
 Deployed Website Link:
 
+<img src= "homework-demo.gif">
