@@ -19,7 +19,7 @@ function startQuiz() {
 var questionElements = document.getElementById("questions"); // Grabbing a reference to the HTML element for showing a specific question
 var questions = [
     {
-        question1: "What color is the sky?",
+        question: "What color is the sky?",
         answers: {
             1: "pink",
             2: "orange",
@@ -29,7 +29,7 @@ var questions = [
         correctAnswer: "4"
     },
     {
-        question2: ""
+        question: ""
     }
 ];
 
