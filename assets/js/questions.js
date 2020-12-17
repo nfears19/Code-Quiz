@@ -19,18 +19,26 @@ function startQuiz() {
 var questionElements = document.getElementById("questions"); // Grabbing a reference to the HTML element for showing a specific question
 var questions = [
     {
-        question: "What color is the sky?",
-        answers: {
-            1: "pink",
-            2: "orange",
-            3: "green",
-            4: "blue"
+        question: "Commonly used data types do not include:",
+        choices: {
+            1: "strings",
+            2: "booleans",
+            3: "alerts",
+            4: "numbers"
         },
-        correctAnswer: "4"
+        correctAnswer: "alerts"
     },
     {
-        question: ""
-    }
+        question: "The condition in an if/else statement is enclosed within_.",
+        choices: {
+            1: "quotes",
+            2: "curly brackets",
+            3: "parentheses",
+            4: "square brackets"
+        },
+        correctAnswer: "parentheses"
+        
+    },
 ];
 
 var counter = 0 // Keeping track of which question the user is on
@@ -47,7 +55,7 @@ function printAnswers () {
     console.log("chocies-test")
     var paragraph = document.createElement("p");
     choiceElements.style.display = "block";
-    document.getElementById("choices").textContent = "choices.answers";
+    document.getElementById("choices").textContent = "questions[counter].choices";
     paragraph.appendChild(choiceElements);
 }
 // Start Timer for the quiz
