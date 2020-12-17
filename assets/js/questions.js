@@ -12,6 +12,7 @@ startButton.addEventListener("click", startQuiz) // Adding an event for the star
 function startQuiz() {
     console.log("started")
     startButton.classList.add("hide") // Hides Start button 
+    printQuestion() // Calling the function to show questions
 } 
 
 var questionElements = document.getElementById("questions"); // Grabbing a reference to the HTML element for showing a specific question
@@ -34,13 +35,11 @@ var questions = [
 var counter = 0 // Keeping track of which question the user is on
 
 function printQuestion () { // Populating the quiz questions
+    console.log("test")
     var newParagraph = document.createElement("p");
     document.getElementById("p").textContent = "questions[counter].question";
     newParagraph.appendChild(questionElements);
-    console.log("test")
 }
-
-function printQuestion()
 
 // Start Timer for the quiz
 
