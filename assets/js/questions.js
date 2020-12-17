@@ -37,7 +37,10 @@ function printQuestion () { // Populating the quiz questions
     var newParagraph = document.createElement("p");
     document.getElementById("p").textContent = "questions[counter].question";
     newParagraph.appendChild(questionElements);
+    console.log("test")
 }
+
+function printQuestion()
 
 // Start Timer for the quiz
 
