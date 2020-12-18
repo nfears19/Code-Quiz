@@ -6,7 +6,7 @@ var endScreen = document.getElementById("end-screen") // Select the end-screen d
 var choiceElements = document.getElementById("choices") // Select the choices div
 let counterEl = document.querySelector("#time") // Timer element
 
-const answerButtonsElement = document.getElementById("answer-buttons")
+var answerButtonsElement = document.getElementById("answer-buttons")
 
 startButton.addEventListener("click", startQuiz) // Adding an event for the start button
 
@@ -20,7 +20,7 @@ function startQuiz() {
 var questions = [
     {
         question: "Commonly used data types do not include:",
-        answer: {
+        answers: {
             1: "strings",
             2: "booleans",
             3: "alerts",
@@ -30,7 +30,7 @@ var questions = [
     },
     {
         question: "The condition in an if/else statement is enclosed within_.",
-        answer: {
+        answers: {
             1: "quotes",
             2: "curly brackets",
             3: "parentheses",
@@ -41,7 +41,7 @@ var questions = [
     },
     {
         question: "Arrays in JavaScript can be used to store_.",
-        answer: {
+        answers: {
             1: "numbers and strings",
             2: "other arrays",
             3: "booleans",
@@ -52,7 +52,7 @@ var questions = [
     },
     {
         question: "String values must be enclosed within _____ when being assigned to variables.",
-        answer: {
+        answers: {
             1: "commas",
             2: "curly brackets",
             3: "quotes",
@@ -63,7 +63,7 @@ var questions = [
     },
     {
         question: "A very useful tool used in development and debugging for printing content to the debugger is:",
-        answer: {
+        answers: {
             1: "JavaScript",
             2: "terminal/bash",
             3: "for loops",
@@ -78,16 +78,19 @@ var counter = 0 // Keeping track of which question the user is on
 function printQuestion () { // Populating the quiz questions
     console.log("test")
     var newParagraph = document.createElement("p");
+    var pText = document.createTextNode("question")
     questionElements.style.display = "block";
-    document.getElementById("question-title").innerText = "questions[counter].question";
-    newParagraph.appendChild("p");
+    document.getElementById("question-title").textContent = questions[counter].question;
+    newParagraph.appendChild(pText);
 }
 
 function printAnswers () { // Populate the quiz answers
     console.log("chocies-test")
     var newParagraph = document.createElement("p");
-    document.getElementById("choices").textContent = answer;
-    newParagraph.appendChild("p");
+    var pText = document.createTextNode("answers");
+    document.getElementById("choices").textContent = questions.answers;
+    newParagraph.appendChild(pText);
+    
 }
 
 // Start Timer for the quiz
