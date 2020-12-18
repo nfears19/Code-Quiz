@@ -88,9 +88,8 @@ function printAnswers () { // Populate the quiz answers
     console.log("chocies-test")
     var newParagraph = document.createElement("p");
     var pText = document.createTextNode("answers");
-    document.getElementById("choices").textContent = questions.answers;
+    document.getElementById("choices.choices").textContent = questions.answers;
     newParagraph.appendChild(pText);
-    
 }
 
 // Start Timer for the quiz
